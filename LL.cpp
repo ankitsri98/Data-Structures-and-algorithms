@@ -16,11 +16,13 @@ int main()
     Node* head = NULL; 
     Node* second = NULL; 
     Node* third = NULL; 
+    Node* fourth = NULL;
   
     // allocate 3 nodes in the heap 
     head = new Node(); 
     second = new Node(); 
     third = new Node(); 
+    fourth = new Node();
   
     /* Three blocks have been allocated dynamically.  
     We have pointers to these three blocks as head,  
@@ -92,6 +94,14 @@ anything yet */
     Note that only the head is sufficient to represent  
     the whole list. We can traverse the complete  
     list by following the next pointers. */
-  
+    fourth->data = 4;
+    third->next= fourth;
+    fourth->next=NULL;
+       head      
+            |  
+            |  
+        +---+---+     +---+---+     +----+----+       +---+---+
+        | 1 | o----->| 2 | o-----> | 3 | o ------->   | 4 | NULL
+        +---+---+     +---+---+     +----+-----+      +--+---+  
     return 0; 
 } 
