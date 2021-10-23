@@ -7,7 +7,6 @@ void towerOfHanoi(char source, char helper, char destination, int numberOfDisc){
         return;
     }
     towerOfHanoi(source,destination,helper,numberOfDisc-1);
-    cout<<"Moving disc "<<numberOfDisc<<" from "<<source<<" to "<<destination<<endl;
     towerOfHanoi(helper,source,destination,numberOfDisc-1);
 }
 
